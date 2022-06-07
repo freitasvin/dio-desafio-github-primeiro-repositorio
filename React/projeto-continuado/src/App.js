@@ -31,9 +31,11 @@ const renderCostumers = (costumer, index) => {
   )
 }
 
+
+// style inline utilizado somente para melhor visualização
 const renderCostumerSkills = (skill, index) => {
   return (
-    <div key={index} style={{paddingLeft: '30px'}}>
+    <div key={`skill-${index}`} style={{paddingLeft: '30px'}}> 
       <li>{skill}</li>
     </div>
   )
