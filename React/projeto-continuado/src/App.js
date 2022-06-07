@@ -1,3 +1,6 @@
+import React from 'react';
+import Button from './components/Button'
+
 const costumerList = [
   {
     id: 1,
@@ -21,11 +24,15 @@ const costumerList = [
   },
 ];
 
+const handlerClick = (id) => {
+  alert(`Id do cliente: ${id} `)
+}
 
-const renderCostumers = (costumer, index) => {
+
+const renderCostumers = (costumer) => {
   return (
     <div key={`costumer-${costumer.id}`}>
-      <li>{costumer.name}</li>
+      <li>{costumer.name} <Button onClick={() => handlerClick(costumer.id)}>Deletar cliente</Button></li>
       {costumer.skills.map(renderCostumerSkills)}
     </div>
   )
